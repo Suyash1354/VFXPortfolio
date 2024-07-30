@@ -1,0 +1,619 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    cursor: none;
+    
+      
+}
+
+
+.cursor {
+    width: 40px; /* Set the width of the cursor image */
+    height: 40px; /* Set the height of the cursor image */
+    background-image: url('spidermanFace.png'); /* Replace with the path to your PNG */
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    position: absolute; /* Allows the cursor to move freely */
+   
+    pointer-events: none; /* Ensures that the cursor doesn’t interfere with mouse events */
+    z-index: 9999; /* Makes sure the cursor is on top of other elements */
+  }
+  
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+#page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000  ;
+}
+
+canvas {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure items are spaced out */
+    position: fixed;
+    z-index: 99;    
+    border-radius: 20px;
+    height: 5vh;
+    width: 100%; /* Use full width */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: transparent
+}
+
+#nav h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+#nav h1 span {
+    color: red;
+    font-size: 25px;
+}
+
+#nav a {
+    cursor: none;
+}
+
+#nav > a > button {
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffcd6d;
+    font-weight: 600;
+    cursor: pointer; /* Changed to pointer */
+    font-size: 0.8vw; /* Adjusted to vw for responsiveness */
+    cursor: none;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1200px) {
+    #nav > a > button {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    #nav > a > button {
+        font-size: 2vw;
+        margin-top: 10px; /* Add some space between button and title */
+    }
+}
+
+@media (max-width: 480px) {
+    #nav h1 {
+        font-size: 24px; /* Adjust title font size for smaller screens */
+    }
+    #nav > a > button {
+        font-size: 3vw;
+    }
+}
+
+
+    
+
+
+
+.me h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.604vw;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    top: 38%;
+    font-weight: 500;
+    left: 50%;
+    transform: translate(40%, 50%);
+    color: white;
+    
+}
+
+.me span {
+    color: rgb(255, 0, 0); 
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8229vw;
+    
+}
+
+@media (max-width: 1080px) {
+
+    .me h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 4.604vw;
+        position: absolute;
+        z-index: 99;
+        text-align: center;
+        top: 38%;
+        font-weight: 500;
+        left: 50%;
+        transform: translate(-10%, 50%);
+        color: white;
+        
+    }
+    
+    .me span {
+        color: rgb(255, 0, 0); 
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.8229vw;
+        
+    }
+}
+
+
+
+/* ----------ABOUT PAGE 2 ------------        */
+
+#page2 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000  
+}
+
+.about h1{
+    position: relative;
+    font-family:'Arimo', sans-serif;
+    font-size: 2.604vw;
+    color: #ffffff;
+    transform: translate(50%,300%);
+    
+    
+}
+.about p{
+    font-family: 'Karla', sans-serif;
+    position: relative;
+    font-size: 1.042vw;
+    color: #ffffff;
+    transform: translate(50%,100%);  
+}
+
+.section{
+    display: flex;
+    transform: translate(80%, 400%);
+    gap: 50px;
+    font-size: 25px;
+    
+    
+}
+
+
+
+
+#page4{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000 
+}
+.section1{
+    display: flex;
+    gap: 50px;
+    font-size: 1.08vw;
+    
+    
+}
+
+.who{
+    transform: translate(750%,30%);
+}
+.who h4{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    
+    color: red;
+}
+
+.who p{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.what{
+   transform: translate(-100%, 400%); 
+}
+
+.what h4{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    
+    color: red;
+}
+.what p{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.how{
+    transform: translate(380%, 650%);
+    
+}
+
+
+
+.how h4{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    
+    color: red;
+}
+.how p{
+    color: rgb(255, 255, 255);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+@media (max-width: 1080px) {
+
+    .about h1{
+        position: relative;
+        font-family:'Arimo', sans-serif;
+        font-size: 4.604vw;
+        color: #ffffff;
+        transform: translate(20%,300%);
+        
+        
+    }
+    .about p{
+        font-family: 'Karla', sans-serif;
+        position: relative;
+        font-size: 2.042vw;
+        color: #ffffff;
+        transform: translate(20%,100%);  
+    }
+    .section1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-size: 5vw; /* Adjust the font size for readability on smaller screens */
+        z-index: 999;
+        padding-left: 200px;
+    }
+
+    .who, .what, .how {
+        text-align: center;
+        transform: none; /* Reset transforms for smaller screens */
+    }
+
+    .who h4, .what h4, .how h4 {
+        font-size: 6vw; /* Adjust heading size */
+    }
+
+    .who p, .what p, .how p {
+        font-size: 4vw; /* Adjust paragraph size */
+    }
+}
+
+/*----------Portfolio-------------Page 6*/
+
+
+#page6 {
+    position: relative;
+    height: 100vh; /* or any height you prefer */
+    width: 100vw;
+    background-color: #111111;
+    overflow: hidden; /* Ensure no overflow from parent */
+    
+}
+
+
+
+
+#page6 h1{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.tabcontent {
+    display: none; /* Hide all tab content by default */
+    
+  }
+  
+ 
+
+#page6 h1::after {
+    content: '';
+    display: block;
+    align-items: center;
+    width: 80px; /* Adjust the width according to your needs */
+    height: 3px; /* Adjust the height according to your needs */
+    background: red; /* Adjust the color according to your needs */
+    margin: 10px auto; /* Adjust the position according to your needs */
+}
+
+
+
+  /* Style the tab buttons */
+/* Style the tab container */
+.tab {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align horizontally */
+    margin: 20px 0; /* Margin around the tab container */
+    
+}
+
+/* Style the tab buttons */
+.tab button {
+    background-color: inherit; /* Inherit background color from parent */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+     /* Change cursor to pointer on hover */
+    padding: 14px 16px; /* Padding inside the button */
+    transition: 0.3s; /* Smooth transition effect */
+    font-size: 17px; /* Font size */
+    color: rgb(255, 255, 255); /* Text color */
+    font-family: 'Karla', sans-serif; /* Font family */
+    font-style: italic; /* Font style */
+    margin: 0 10px; /* Margin between buttons */
+    cursor: none;
+}
+
+/* Remove default focus outline */
+.tab button:focus {
+    outline: none; /* Ensure no outline is displayed when focused */
+}
+
+/* Create an active/current tablink class */
+.tab button::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Display block */
+    width: 0; /* Initial width */
+    height: 2px; /* Line height */
+    background: red; /* Line color */
+    transition: width .3s; /* Smooth transition for width change */
+}
+
+.tab button.active::after {
+    width: 100%; /* Full width for active state */
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none; /* Hide by default */
+    padding: 25px; /* Padding inside content */
+    
+}
+
+/* Center align the videos within the tab content */
+.tabcontent video {
+    width: 500px; /* Width of videos */
+    margin: 10px auto; /* Center align with margin auto */
+    border-radius: 10px; /* Rounded corners for videos */
+    cursor: none;
+}
+
+/* Style for the videos inside the ALL tab */
+#ALL video {
+    width: 20vw; /* Adjust the width as needed */
+    margin: 10px auto; /* Center align with margin auto */
+    border-radius: 20px; /* Rounded corners for videos */
+    padding: 10px;
+    
+}
+
+ 
+@media (max-width: 1080px) {
+    #ALL video {
+       display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .tabcontent video {
+        width: 50vw; /* Adjust the width to 50% of the viewport width */
+        margin: 1vw auto; /* Center align with margin auto and set margin in vw */
+        border-radius: 1vw; /* Rounded corners using vw */
+        cursor: none; /* Cursor style */
+    }
+}
+ 
+#page8{
+
+    position: relative;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000 
+    
+}
+
+.contact-left{
+    flex-basis: 35%;
+    color: white;   /**/
+  }
+
+  .contact-right{
+    flex-basis: 60%;
+  }
+
+  .contact-left p{
+    margin-top: 30px ;
+  }
+  .contact-left p i{    
+    color: red;
+    margin-right: 10px;
+    
+  }
+  .social-icons{
+    margin-top: 30px;
+  }
+
+  .social-icons a{             /**/
+    padding: 5px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    transition: transform 0.5s;
+    cursor: none;
+  }
+
+  .social-icons a:hover{
+    color: red;
+    transform: translateY(-5px);
+  }
+
+  .contact-right form{
+    width: 100%;
+    
+  }
+  form input, form textarea{
+    position: relative;
+    left: 400px;
+    bottom: 200px;
+    width: 50%; /* Adjust this line */
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: none;
+}
+
+form button{
+  
+  width: 10%; /* Adjust as needed */
+  padding: 1px;
+  transform: translate(-30%,-700%);
+  border: none;
+  outline: none;
+  background: #ff0000; /* Change to your preferred color */
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  
+  transition: background 0.5s;
+}
+
+form button:hover{
+  background: #cc0000; /* Change to your preferred hover color */
+}
+.contact-left h1{
+  font-size: 30px; /* Adjust as needed */
+  font-family: 'Arimo', sans-serif;
+  position: relative;
+  top: 50px;
+  
+}
+
+.contact-left p{
+  font-size: 20px; /* Adjust as needed */
+  position: relative;
+  top: 50px;
+}
+
+.social-icons a{
+  font-size: 40px; /* Adjust as needed */
+  position: relative;
+  top: 50px;
+}
+
+#page8 h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    bottom: 0; /* Align to the bottom of the container */
+    width: 100%; /* Ensure it spans the full width of the container */
+    text-align: center; /* Center align the text horizontally */
+    padding: 10px; /* Optional: Add padding if needed */
+    margin: 0; /* Optional: Remove default margin if needed */
+}
+
+
+   
+
+
+/* Preloader styling */
+/* Preloader styling */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Change this to match your design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it covers the entire page */
+    color: #fff; /* Text color */
+}
+
+#preloader img {
+    width: 100px; /* Adjust the size of your GIF */
+    height: auto;
+}
+
+#preloader p {
+    margin-top: 10px; /* Space between the GIF and the text */
+    font-size: 16px; /* Adjust the font size */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center;
+}
+
+
+
+@media (max-width: 1080px) {
+    form button {
+        width: 10%; /* Adjust as needed */
+        padding: 0.1vw; /* Converted from 1px to 0.1vw */
+        transform: translate(-30%, -700%); /* Keeping the same values as they are already in percentages */
+        border: none;
+        outline: none;
+        background: #ff0000; /* Change to your preferred color */
+        color: #fff;
+        font-size: 1.67vw; /* Converted from 18px to 1.67vw */
+        border-radius: 0.56vw; /* Converted from 6px to 0.56vw */
+        display: none;
+        transition: background 0.5s;
+    }
+
+    .tab button[onclick*="openCity(event, 'ALL')"] {
+        display: none;
+    }
+
+    .cursor {
+        width: 3.7vw; /* Converted from 40px to 3.7vw */
+        height: 3.7vw; /* Converted from 40px to 3.7vw */
+        background-image: url('spidermanFace.png'); /* Replace with the path to your PNG */
+        background-size: cover; /* Ensure the image covers the entire div */
+        background-repeat: no-repeat; /* Prevent repeating the image */
+        position: absolute; /* Allows the cursor to move freely */
+        display: none;
+        pointer-events: none; /* Ensures that the cursor doesn’t interfere with mouse events */
+        z-index: 9999; /* Makes sure the cursor is on top of other elements */
+    }
+}
+

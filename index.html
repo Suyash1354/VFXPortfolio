@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="spidermanFace.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Barlow+Condensed:ital,wght@1,200&family=Barlow+Semi+Condensed:wght@100&family=Karla:ital,wght@0,400;0,700;0,800;1,500&family=Oswald:wght@700&family=PT+Sans&family=Teko&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Barlow+Condensed:ital,wght@1,200&family=Karla:ital,wght@0,400;0,700;0,800;1,500&family=Oswald:wght@700&family=PT+Sans&family=Teko&display=swap">
+</head>
+
+<body>
+
+    
+
+
+    <div id="preloader">
+        <img src="sneaking-out-spider-man.gif" alt="Loading...">
+        <p>Wait SpiderMan is Working Behind...</p>
+    </div>
+
+    <div class="cursor"></div>
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none';
+        });
+
+        document.addEventListener('mousemove', TrackCursor);
+        document.addEventListener('mousedown', () => cursor.classList.add('active'));
+        document.addEventListener('mouseup', () => cursor.classList.remove('active'));
+
+        function TrackCursor(evt) {
+            const w = cursor.clientWidth;
+            const h = cursor.clientHeight;
+            cursor.style.transform =
+                `translate(${evt.clientX - w / 2}px, ${evt.clientY - h / 2}px)`;
+        }
+    </script>
+
+
+
+    <div id="nav">
+        <h1>SERGIO<span>FX</span></h1>
+        <a href="VFX Resume.pdf" download>
+            <button>Resume</button>
+        </a>
+    </div>
+    <div id="main">
+        <div id="page">
+            <div class="me">
+                <h1>Oye! I am Suyash Patil, <br>
+                    <span>A VFX Artist</span>
+                </h1>
+            </div>
+            <canvas></canvas>
+        </div>
+        <div id="page2">
+            <div class="about">
+                <h1>About Me</h1>
+                <p>With a dynamic and innovative mindset cultivated over 3 years in the field,<br> I am a seasoned VFX
+                    artist and video editor who transforms creative visions into captivating visual <br> masterpieces.
+                    My journey is marked by a relentless passion for pushing the boundaries of visual <br> storytelling
+                    through the fusion of cutting-edge technology and artistic ingenuity. <br>
+                    Having honed my skills through years of hands-on experience, I possess an acute <br> understanding
+                    of the intricacies of video editing and VFX production. I seamlessly blend technical <br> expertise
+                    with artistic intuition, allowing me to craft immersive narratives that leave a lasting <br> impact
+                    on
+                    audiences. From seamlessly integrating mind-bending visual effects to meticulously <br> refining
+                    every frame, my work consistently reflects an unwavering commitment to excellence.
+                </p>
+            </div>
+        </div>
+        <div id="page4">
+            <div class="section1">
+                <div class="who">
+                    <h4>WHO AM I?</h4>
+                    <p>I'm Suyash Patil and I'm an Artist <br>with over 3 years of experience <br> working in Short
+                        films and Videos</p>
+                </div>
+                <div class="what">
+                    <H4>WHAT DO I DO?</H4>
+                    <p>As a generalist, I tackle almost all <br> aspects of video whether it be 2D <br> or 3D animation,
+                        visual effects, <br> compositing, live Action and 3D Video.</p>
+                </div>
+                <div class="how">
+                    <H4>HOW DO I DO?</H4>
+                    <p>With a wide breadth of software <br> experience using Blender, After Effects, <br> Premiere Pro,
+                        Photoshop, and <br> many others in production environments.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="page6">
+            <h1>My Work</h1>
+            <div id="collection">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'ALL')">ALL</button>
+                    <button class="tablinks" onclick="openCity(event, 'LIVE_ACTION')">Live Action</button>
+                    <button class="tablinks" onclick="openCity(event, 'VFX')">VFX</button>
+                    <button class="tablinks" onclick="openCity(event, 'DUBBING_VIDEO')">Dubbing Video</button>
+                </div>
+
+                <center>
+                    <div class="button-container">
+                        <div id="ALL" class="tabcontent">
+                            <video src="/Itachi....Final.....mp4" controls></video>
+                            <video src="/complete.mp4" controls poster="Screenshot (366).png"></video>
+                            <video src="/1080 p insta.mp4" controls></video>
+                            <video src="The Boys(Final).mp4" controls poster="Screenshot (367).png"></video>
+                            <video src="/madara dubb.mp4" controls></video>
+                            <video src="/pain speech in hindi.mp4" controls></video>
+                            <video src="/ObitiDubb.mp4" controls></video>
+                            <video src="Sukuna Sankrit Dubb.mp4 " controls></video>
+                            <video src="Itachi words (1).mp4" controls></video>
+                            <video src="1Project.mp4" controls poster="Screenshot (368).png"></video>
+                            <video src="/1080 p insta.mp4" controls poster="Screenshot (370).png"></video>
+                        </div>
+
+                        <div id="LIVE_ACTION" class="tabcontent">
+                            <video src="/Itachi....Final.....mp4" controls></video>
+                            <video src="/complete.mp4" controls poster="Screenshot (366).png"></video>
+                            <video src="1Project.mp4" controls poster="Screenshot (368).png"></video>
+                        </div>
+
+                        <div id="VFX" class="tabcontent">
+                            <video src="The Boys(Final).mp4" controls poster="Screenshot (367).png"></video>
+                            <video src="/1080 p insta.mp4" controls poster="Screenshot (370).png"></video>
+                        </div>
+
+                        <div id="DUBBING_VIDEO" class="tabcontent">
+                            <video src="/madara dubb.mp4" controls></video>
+                            <video src="/pain speech in hindi.mp4" controls></video>
+                            <video src="ObitiDubb.mp4" controls></video>
+                            <video src="Sukuna Sankrit Dubb.mp4 " controls></video>
+                            <video src="Itachi words (1).mp4" controls></video>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div id="page8">
+            <div id="Contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1>
+                                <div class="title">Contact Me</div>
+                            </h1>
+                            <p><i class="fas fa-paper-plane"></i> patilsuyash31@gmail.com</p>
+                            <p><i class="fas fa-mobile-alt"></i> 8010577385</p>
+                            <div class="social-icons">
+                                <a href="https://www.freelancer.in/dashboard"><i class="fas fa-dove"></i></a>
+                                <a href="https://www.youtube.com/channel/UCt1CFx0nDJB2AzQn9xDBIXg"><i
+                                        class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <form id="contact-form" action="https://formspree.io/f/mzzpeaqo" method="POST">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                            <div id="form-response" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4>@2024 Suyash Patil</h4>
+        </div>
+
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                var form = event.target;
+                var data = new FormData(form);
+                var xhr = new XMLHttpRequest();
+                xhr.open(form.method, form.action);
+                xhr.setRequestHeader('Accept', 'application/json');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                    var responseDiv = document.getElementById('form-response');
+                    if (xhr.status === 200) {
+                        form.reset();
+                        responseDiv.innerHTML = 'Thank you for your message!';
+                    } else {
+                        responseDiv.innerHTML = 'Oops! There was a problem submitting your form.';
+                    }
+                    responseDiv.style.display = 'block';
+                };
+                xhr.send(data);
+            });
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+            integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+            integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/ loaders/GLTFLoader.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
